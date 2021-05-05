@@ -6,10 +6,12 @@ const flash = require('express-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const {check, validationResult} = require('express-validator');
+const cors = require('cors');
 const ListUser = [];
 app.use(cookieParser('nmh'));
 app.use(session({ cookie: { maxAge: 60000 }}));
 app.use(flash());
+app.use(cors());
 
 const loginValidation = [
     check('name').exists().withMessage('Vui lòng nhập Ten Nguoi')
@@ -30,12 +32,6 @@ app.use(express.static('style'));
 app.use(express.static('public'));
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({extended:false}));
-app.use((req,res,next)=>{
-    res.header('Access-Control-Allow-Origin','*');
-    res.header('Access-Control-Allow-Origin','GET','PUT','POST','DELETE');
-    res.header('Access-Control-Allow-Origin','Content-Type');
-    next();
-})
 const arrayEmoji = ["😀", "😃", "😄 ","😁"," 😆"," 😅 ","😂 ","🤣 "," 😊"," 😇 ","🙂 ","🙃 ","😉 ","😌 ","😍 ","🥰 ","😘"," 😗",
     " 😙"," 😚 ","😋 ","😛 ","😝 ","😜 ","🤪 ","🤨 ","🧐 ","🤓 ","😎 "," 🤩"," 🥳"," 😏"," 😒"," 😞"," 😔"," 😟"," 😕"," 🙁"," ☹️"," 😣"," 😖"," 😫",
     " 😩"," 🥺","😢 ","😭"," 😤"," 😠 ","😡 ","🤬 ","🤯 ","😳 ","🥵 ","🥶 ","😱"," 😨"," 😰"," 😥"," 😓"," 🤗 ","🤔 ","🤭"," 🤫"," 🤥"," 😶"," 😐"," 😑"," 😬"," 🙄 ","😯 ","😦 ","😧 ","😮"," 😲",
