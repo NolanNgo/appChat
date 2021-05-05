@@ -33,6 +33,11 @@ emoji.forEach(emo => {
         
     })
 })
+
+function enterKey(event){
+    console.log(event);
+}
+
 btn_emoji.addEventListener('click',(e)=>{
     e.preventDefault();
     dashboard.style.display="block";

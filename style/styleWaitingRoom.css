@@ -6,9 +6,6 @@
     font-size:20px;
   }
 
-html{
-    background-color:#7ebff5
-}
 
   body a{
     color: darkorchid;
@@ -19,47 +16,55 @@ html{
       margin-left:70px;
   }
   .login-form-wrap {
-      display: flex;
+      /* display: flex;
       justify-content: center;
-      align-items: center;
-      width: 1100px;
-      height: 600px;
+      align-items: center; */
+      max-width: 1100px;
+      max-height: 800px;
       margin: 0 auto;
-      overflow: hidden;
       border-radius: 50px;
       box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.47);
-      margin-top: 45px;
-      background: #fff;
+      margin-top: 10%;
+      
   }
   .welcome p {
       font-size: 25px;
       margin-left:50px;
   }
   .left-section{
-    min-width: 600px;
+          /* display: flex;
+      justify-content: center;
+      align-items: center; */
+    padding-right: 30px;
+    background: #fff;
     height: 540px;
     float:left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   .right-section {
       /* margin-right: 100px; */
-      width: 600px;
+      max-width: 600px;
       position: relative;
-      height: 1000px;
       float: right;
       align-items: center;
       background-image: url(picture.jpg);
       background-size: cover;
       background-position: 570px 0px;
       object-fit: cover;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
       padding-right: 100px;
   }
   .welcome{
-    position: absolute;
+    
+    /* position: absolute; */
+    max-width: 100%;
+    height:100%;
     top:45%;
-    color: #fff;
+    padding-top: 30%;
     text-align: center;
     right: 110px;
-    transform: translateY(-50%)
   }
   .title {
       text-align: center;
@@ -74,7 +79,7 @@ html{
       text-align: center;
   }
   .form input[type=text] {
-      width: 350px;
+      max-width: 350px;
       padding: 14px 12px;
       border-radius: 30px;
       border: 1px solid #ddd;
@@ -83,7 +88,7 @@ html{
       box-shadow: 0px 0px 42px #d4d4d4;
   }
   .form select{
-    width: 350px;
+    max-width: 350px;
     padding: 14px 100px 12px 12px;
     border-radius: 30px;
     border:none;
@@ -107,7 +112,7 @@ html{
   .form input[type="submit"] {
       display: inline-block;
       border: none;
-      width: 350px;
+      max-width: 350px;
       padding: 11px;
       background-color: rgb(45, 37, 161);
       color: #fff;
@@ -127,3 +132,41 @@ html{
   .form input[type="submit"]:hover {
     background: #111;
   }
+
+  @media (max-width: 480px) {
+    body {
+      background-color:#7ebff5
+    }
+    .left-section{
+      display: block;
+      padding-right: 20px;
+      align-items: center;
+    }
+    .right-section{
+      display: none;
+    }
+  }
+  @media (min-width: 481px){
+    body {
+      background-color:#7ebff5
+    }
+    .left-section{
+      display: block;
+      padding-right: 20px;
+      align-items: center;
+    }
+    .right-section{
+      display: none;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 716px){
+    body {
+      background-color:#7ebff5
+    }
+    .right-section{
+      max-width:100%;
+      display: block;
+    }
+  } 
