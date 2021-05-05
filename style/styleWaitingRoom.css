@@ -15,14 +15,15 @@ html{
     text-decoration: none;
   }
   h1{
-      font-size:35px;
+      font-size:30px;
+      margin-left:70px;
   }
   .login-form-wrap {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 1200px;
-      height: 800px;
+      width: 1100px;
+      height: 600px;
       margin: 0 auto;
       overflow: hidden;
       border-radius: 50px;
@@ -31,7 +32,8 @@ html{
       background: #fff;
   }
   .welcome p {
-      font-size: 30px;
+      font-size: 25px;
+      margin-left:50px;
   }
   .left-section{
     min-width: 600px;

@@ -22,7 +22,8 @@ body {
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	padding-left: 300px;
+	padding-left: 100px;
+	padding-right: 100px;
 	margin: 20px;
 
 }
@@ -57,7 +58,7 @@ a {
 	color: #fff;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
-	width: 85%;
+	width: 100%;
 	padding: 15px;
 	display: flex;
 	align-items: center;
@@ -74,7 +75,7 @@ a {
 
 .chat-sidebar {
 	
-	width: 400px;
+	width: 350px;
 	background: var(--dark-color-b);
 	color: #fff;
 	padding: 20px 20px 60px;
@@ -97,7 +98,7 @@ a {
 }
 
 .chatMessages {
-	width: 750px;
+	width: 850px;
 	padding: 30px;
 	max-height: 800px;
 	overflow-y: scroll;
@@ -126,7 +127,7 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	width:85%;
+	width:100%;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 
