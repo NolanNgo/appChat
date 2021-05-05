@@ -1,5 +1,5 @@
 
-var socket = io('http://localhost:5000');
+var socket = io();
 const chatArea = document.getElementById('chatForm');
 const chatWindow = document.querySelector('.chatMessages');
 const Room = document.getElementById('room-name');

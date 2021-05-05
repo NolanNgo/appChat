@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const moment = require('moment');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const flash = require('express-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const {check, validationResult} = require('express-validator');
-const cors = require('cors');
+var cors = require('cors')
 const ListUser = [];
 app.use(cookieParser('nmh'));
 app.use(session({ cookie: { maxAge: 60000 }}));
@@ -31,7 +31,7 @@ app.use(express.static('views'));
 app.use(express.static('style'));
 app.use(express.static('public'));
 app.set('view engine','ejs')
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));
 const arrayEmoji = ["😀", "😃", "😄 ","😁"," 😆"," 😅 ","😂 ","🤣 "," 😊"," 😇 ","🙂 ","🙃 ","😉 ","😌 ","😍 ","🥰 ","😘"," 😗",
     " 😙"," 😚 ","😋 ","😛 ","😝 ","😜 ","🤪 ","🤨 ","🧐 ","🤓 ","😎 "," 🤩"," 🥳"," 😏"," 😒"," 😞"," 😔"," 😟"," 😕"," 🙁"," ☹️"," 😣"," 😖"," 😫",
     " 😩"," 🥺","😢 ","😭"," 😤"," 😠 ","😡 ","🤬 ","🤯 ","😳 ","🥵 ","🥶 ","😱"," 😨"," 😰"," 😥"," 😓"," 🤗 ","🤔 ","🤭"," 🤫"," 🤥"," 😶"," 😐"," 😑"," 😬"," 🙄 ","😯 ","😦 ","😧 ","😮"," 😲",
@@ -39,7 +39,7 @@ const arrayEmoji = ["😀", "😃", "😄 ","😁"," 😆"," 😅 ","😂 ","�
     " 💀"," ☠️ ","👽 ","👾 ","🤖 ","🎃 ","😺 ","😸 ","😹 ","😻 ","😼"," 😽"," 🙀"," 😿 ","😾"]
 
 
-app.get('/',(req,res)=>{
+app.get('/',cors(),(req,res)=>{
     if(req.session.user){
         return res.redirect('chat'); 
     }else{
@@ -47,7 +47,7 @@ app.get('/',(req,res)=>{
         return res.render('index',{user});
     }
 })
-app.post('/',(req,res)=>{
+app.post('/',cors(),(req,res)=>{
     const {username , room} = req.body;
     req.flash('name',username);
     req.flash('room',room);
@@ -55,7 +55,7 @@ app.post('/',(req,res)=>{
     req.session.user = username;
     res.redirect('/chat')
 })
-app.get('/chat',(req,res)=>{
+app.get('/chat',cors(),(req,res)=>{
     if(!req.session.user){
         return res.redirect('/'); 
     }
@@ -72,7 +72,7 @@ app.get('/chat',(req,res)=>{
     
 })
 
-app.get('/logout',(req,res)=>{
+app.get('/logout',cors(),(req,res)=>{
     req.session.user = null; // chỉ xóa biến user lưu thông tin user
     //req.session.destroy() // xóa hết toàn bộ những biến đã lưu
     res.redirect('/');
