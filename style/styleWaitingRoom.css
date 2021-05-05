@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins';
+    font-size:20px;
+  }
+
+html{
+    background-color:#7ebff5
+}
+
+  body a{
+    color: darkorchid;
+    text-decoration: none;
+  }
+  h1{
+      font-size:35px;
+  }
+  .login-form-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1200px;
+      height: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 50px;
+      box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.47);
+      margin-top: 45px;
+      background: #fff;
+  }
+  .welcome p {
+      font-size: 30px;
+  }
+  .left-section{
+    min-width: 600px;
+    height: 540px;
+    float:left;
+  }
+  .right-section {
+      /* margin-right: 100px; */
+      width: 600px;
+      position: relative;
+      height: 100vh;
+      float: right;
+      align-items: center;
+      background-image: url(picture.jpg);
+      background-size: cover;
+      background-position: 570px 0px;
+      object-fit: cover;
+      padding-right: 100px;
+  }
+  .welcome{
+    position: absolute;
+    top:45%;
+    color: #fff;
+    text-align: center;
+    right: 110px;
+    transform: translateY(-50%)
+  }
+  .title {
+      text-align: center;
+      margin-top: 80px;
+      color: #292929;
+      line-height: 30px;
+      margin-bottom: 30px;
+  }
+  .form {
+      max-width: 260px;
+      margin: 0 auto;
+      text-align: center;
+  }
+  .form input[type=text] {
+      width: 350px;
+      padding: 14px 12px;
+      border-radius: 30px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+      outline: none;
+      box-shadow: 0px 0px 42px #d4d4d4;
+  }
+  .form select{
+    width: 350px;
+    padding: 14px 100px 12px 12px;
+    border-radius: 30px;
+    border:none;
+    margin-bottom: 15px;
+    outline: none;
+    box-shadow: 0px 0px 42px #d4d4d4;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+  span.floatleft {
+      font-size: 13px;
+      float: left;
+  }
+  span.floatright {
+      font-size: 13px;
+      float: right;
+  }
+  .form input[type="submit"] {
+      display: inline-block;
+      border: none;
+      width: 350px;
+      padding: 11px;
+      background-color: rgb(45, 37, 161);
+      color: #fff;
+      border-radius: 30px;
+      text-align: center;
+      font-weight: 400;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 20px;
+      margin: 20px 0px;
+      transition: 0.3s all ease-in-out;
+  }
+  .form input[type="submit"]:focus {
+    outline: none;
+  }
+  .form input[type="submit"]:hover {
+    background: #111;
+  }
