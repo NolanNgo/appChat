@@ -23,7 +23,11 @@ const port = process.env.PORT || 5000;
 const http = require('http');
 // tao server voi http createServer
 const server = http.createServer(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server,{
+    cors: {
+        origin:"*",
+    }
+});
 const bot = 'Night BOT';
 // const io = socketio(server);
 // tra ve thu muc view , style , public laf noi chua thong tin tra ve
