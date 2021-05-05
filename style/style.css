@@ -19,8 +19,12 @@ body {
     color: black;
 	font-family:'Poppins';
 	font-size: 30px;
-	
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 300px;
 	margin: 20px;
+
 }
 
 ul {
@@ -53,7 +57,7 @@ a {
 	color: #fff;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
-	width: 100%;
+	width: 85%;
 	padding: 15px;
 	display: flex;
 	align-items: center;
@@ -62,14 +66,15 @@ a {
 
 .chat-main {
 	border-left: 1px solid;
-	height: 750px;
+	width:85%;
+	height: 550px;
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 }
 
 .chat-sidebar {
 	
-	max-width: 500px;
+	max-width: 600px;
 	background: var(--dark-color-b);
 	color: #fff;
 	padding: 20px 20px 60px;
@@ -92,7 +97,7 @@ a {
 }
 
 .chatMessages {
-	width: 1300px;
+	width: 1100px;
 	padding: 30px;
 	max-height: 800px;
 	overflow-y: scroll;
@@ -121,6 +126,7 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
+	width:85%;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 
