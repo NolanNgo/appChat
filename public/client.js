@@ -7,6 +7,8 @@ const ListUser = document.getElementById('users');
 const emoji = document.querySelectorAll('.emoji');
 const dashboard = document.getElementById('dashboard');
 let msg = document.getElementById('msg')
+const btn_emoji = document.getElementById('btn_emoji');
+const btn_close = document.getElementById('btn_close');
 // console.log(username);
 // console.log(room);
 // 
@@ -30,6 +32,14 @@ emoji.forEach(emo => {
         msg.value = msg.value + e.target.innerText;
         
     })
+})
+btn_emoji.addEventListener('click',(e)=>{
+    e.preventDefault();
+    dashboard.style.display="block";
+})
+btn_close.addEventListener('click',(e)=>{
+    e.preventDefault();
+    dashboard.style.display="none";
 })
 chatArea.addEventListener('submit',(e)=>{
     e.preventDefault();
